@@ -1,19 +1,19 @@
 const express = require("express");
 const app = express();
-// const cors = require("cors");
-// require("dotenv").config({ path: "" });
-// require("./Config/Database");
+const cors = require("cors");
+require("dotenv").config({ path: "" });
+require("./Config/Database");
 const Port = process.env.PORT || 3000;
 
-//Global Level Middlewares
-// app.use(cors({ origin: true, credentials: true }));
+// Global Level Middlewares
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
-// //Importing Routes
-// const contactRoute = require("./Routes/Contact.Route");
+//Importing Routes
+const contactRoute = require("./Routes/Contact.Route");
 
-// //Configuire Routes
-// app.use("/api/v1", contactRoute);
+//Configuire Routes
+app.use("/api/v1", contactRoute);
 
 app.get("/", (req, res) => {
   res.status(200).json({

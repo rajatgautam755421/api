@@ -16,5 +16,8 @@
   },
   "scripts": {
     "start": "node server.js"
-  }
+  },
+  "repository": "https://github.com/rajatgautam755421/api.git",
+  "author": "rajat755421 <rajatgautam832@gmail.com>",
+  "license": "MIT"
 }
