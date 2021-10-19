@@ -1,16 +1,13 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const logger = require("morgan");
 require("dotenv").config({ path: "" });
 require("./Config/Database");
-const Port = process.env.PORT || 3000;
+const Port = 3000;
 
 //Global Level Middlewares
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
-
-app.use(logger("dev"));
 
 //Importing Routes
 const contactRoute = require("./Routes/Contact.Route");
