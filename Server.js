@@ -4,7 +4,7 @@ const cors = require("cors");
 const logger = require("morgan");
 require("dotenv").config({ path: "" });
 require("./Config/Database");
-const Port = pocess.env.PORT || 3000;
+const Port = process.env.PORT || 3000;
 
 //Global Level Middlewares
 app.use(cors({ origin: true, credentials: true }));
