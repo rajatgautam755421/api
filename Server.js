@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 // const cors = require("cors");
 // require("dotenv").config({ path: "" });
-require("./Config/Database");
-const Port = 3000;
+// require("./Config/Database");
+const Port = process.env.PORT || 3000;
 
 //Global Level Middlewares
 // app.use(cors({ origin: true, credentials: true }));
