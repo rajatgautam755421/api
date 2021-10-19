@@ -4,6 +4,7 @@ const cors = require("cors");
 const logger = require("morgan");
 require("dotenv").config({ path: "" });
 require("./Config/Database");
+const Port = pocess.env.PORT || 3000;
 
 //Global Level Middlewares
 app.use(cors({ origin: true, credentials: true }));
@@ -24,6 +25,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(Port, () => {
   console.log("Server is up and running at 3000 🚀 ");
 });
